@@ -17,14 +17,14 @@ $(function(){
     }
 
     $("#countSpan").text(generateCounter.toString());
-
-    $("#deleteButton").on("click", function(){
-      console.log($(this).parent());
-      $(this).parent().remove();
-    });
-
-    $("#changeButton").on("click", function(){
-      $("#container").toggleClass("change");
-    });
   });
+
+  $("body").on("click", "#deleteButton", function(){
+    $(this).parent().remove();
+  });
+
+  $("body").on("click", "#changeButton", function(){
+    $("#container").toggleClass("change");
+  });
+  
 });
